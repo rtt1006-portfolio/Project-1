@@ -1,0 +1,17 @@
+@charset 'utf-8';
+ /* 스킬스타일 */
+ .section.skill{background-color:#000;}
+ .section.skill article{width:46.875%;margin-bottom:36px;} 
+ .section.skill .sec-tit{color:#fff;}           
+ .section.skill .img-box{margin-bottom:14px;text-align:center;}
+ .section.skill .img-box img{width:60%;}
+ .section.skill .sub-tit{margin-bottom:0;color:#ddd;}
+ .section.skill .sub-tit + p{color:#ddd;}
+
+ @media(min-width:768px){
+    .section.skill article{width:31.59340659340659%;} 
+ }
+
+ @media(min-width:1220px){
+    .section.skill article{width:15.25423728813559%;}
+ }

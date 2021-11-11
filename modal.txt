@@ -1,0 +1,28 @@
+<article class="work-megabox">
+    <h3 class="sub-tit">MEGABOX</h3>
+    <a href="#" rel="modal:close">Close</a>
+    <img src="./images/megabox/megabox01.jpg" alt="메가박스1">
+    <img src="./images/megabox/megabox02.jpg" alt="메가박스1">
+    <img src="./images/megabox/megabox03.jpg" alt="메가박스1">
+    <img src="./images/megabox/megabox04.jpg" alt="메가박스1">
+    <img src="./images/megabox/megabox05.jpg" alt="메가박스1">
+    <img src="./images/megabox/megabox06.jpg" alt="메가박스1">
+    <img src="./images/megabox/megabox07.jpg" alt="메가박스1">
+    <img src="./images/megabox/megabox08.jpg" alt="메가박스1">
+    <img src="./images/megabox/megabox09.jpg" alt="메가박스1">
+    <img src="./images/megabox/megabox10.jpg" alt="메가박스1">
+</article>
+<article class="work-hollys">
+    <h3 class="sub-tit">HOLLYS</h3>
+    <a href="#" rel="modal:close">Close</a>
+    <img src="./images/megabox/megabox01.jpg" alt="메가박스1">
+    <img src="./images/megabox/megabox02.jpg" alt="메가박스1">
+    <img src="./images/megabox/megabox03.jpg" alt="메가박스1">
+    <img src="./images/megabox/megabox04.jpg" alt="메가박스1">
+    <img src="./images/megabox/megabox05.jpg" alt="메가박스1">
+    <img src="./images/megabox/megabox06.jpg" alt="메가박스1">
+    <img src="./images/megabox/megabox07.jpg" alt="메가박스1">
+    <img src="./images/megabox/megabox08.jpg" alt="메가박스1">
+    <img src="./images/megabox/megabox09.jpg" alt="메가박스1">
+    <img src="./images/megabox/megabox10.jpg" alt="메가박스1">
+</article>

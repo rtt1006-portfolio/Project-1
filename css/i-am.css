@@ -1,0 +1,22 @@
+@charset 'utf-8';
+/* 아이엠스타일 */
+.section.i-am{}            
+            
+.section.i-am .img-box{
+    margin-bottom:26px;
+    text-align:center;
+}
+.section.i-am .img-box img{
+    width:158px;
+}
+
+@media(min-width:768px){
+    .section.i-am h2{order:1;}
+    .section.i-am .con-txt{width:57.28021978021978%;order:2;}
+    .section.i-am .img-box{width:40.10989010989011%;order:3;}
+}
+@media(min-width:1220px){
+    .section.i-am .con-txt{width:57.6271186440678%;}
+    .section.i-am .img-box{width:40.67796610169492%;}
+    .section.i-am .img-box img{width:268px;}
+}
