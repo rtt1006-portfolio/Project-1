@@ -1,28 +1,25 @@
-<article class="work-megabox">
-    <h3 class="sub-tit">MEGABOX</h3>
-    <a href="#" rel="modal:close">Close</a>
-    <img src="./images/megabox/megabox01.jpg" alt="메가박스1">
-    <img src="./images/megabox/megabox02.jpg" alt="메가박스1">
-    <img src="./images/megabox/megabox03.jpg" alt="메가박스1">
-    <img src="./images/megabox/megabox04.jpg" alt="메가박스1">
-    <img src="./images/megabox/megabox05.jpg" alt="메가박스1">
-    <img src="./images/megabox/megabox06.jpg" alt="메가박스1">
-    <img src="./images/megabox/megabox07.jpg" alt="메가박스1">
-    <img src="./images/megabox/megabox08.jpg" alt="메가박스1">
-    <img src="./images/megabox/megabox09.jpg" alt="메가박스1">
-    <img src="./images/megabox/megabox10.jpg" alt="메가박스1">
+<article class="work-flow">
+    <h3 class="sub-tit">PORTFOLIO</h3>
+    <a href="#home" rel="modal:close">Close</a>
+    <img src="./images/work-flow/work-flow01.jpg" alt="work-flow01">
+    <img src="./images/work-flow/work-flow02.jpg" alt="work-flow02">
+    <img src="./images/work-flow/work-flow03.jpg" alt="work-flow03">
+    <img src="./images/work-flow/work-flow04.jpg" alt="work-flow04">
+    <img src="./images/work-flow/portfolio-m.png" alt="portfolio-m-design">>
+    <img src="./images/work-flow/portfolio-p.png" alt="portfolio-p-design">
+
 </article>
-<article class="work-hollys">
-    <h3 class="sub-tit">HOLLYS</h3>
-    <a href="#" rel="modal:close">Close</a>
-    <img src="./images/megabox/megabox01.jpg" alt="메가박스1">
-    <img src="./images/megabox/megabox02.jpg" alt="메가박스1">
-    <img src="./images/megabox/megabox03.jpg" alt="메가박스1">
-    <img src="./images/megabox/megabox04.jpg" alt="메가박스1">
-    <img src="./images/megabox/megabox05.jpg" alt="메가박스1">
-    <img src="./images/megabox/megabox06.jpg" alt="메가박스1">
-    <img src="./images/megabox/megabox07.jpg" alt="메가박스1">
-    <img src="./images/megabox/megabox08.jpg" alt="메가박스1">
-    <img src="./images/megabox/megabox09.jpg" alt="메가박스1">
-    <img src="./images/megabox/megabox10.jpg" alt="메가박스1">
-</article>
+
+<div id="modal" class="modal-wrap">
+    <div class="modal">
+        <article class="cover-letter">
+            <img src="./images/work-flow/자기소개서01.png" alt="자기소개서 이미지01">
+            <img src="./images/work-flow/지원동기.png" alt="자기소개서 이미지02">
+            <img src="./images/work-flow/학교경험.png" alt="자기소개서 이미지03">
+            <img src="./images/work-flow/성격의장단점.png" alt="자기소개서 이미지04">
+            <img src="./images/work-flow/성장배경.png" alt="자기소개서 이미지05">   
+        </article>
+    <button onclick="closeModal();" type="button">닫기</button>
+    </div>
+</div>
+

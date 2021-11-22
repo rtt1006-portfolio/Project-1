@@ -1,252 +1,700 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 메타 -->
-    <!-- 파비콘     -->
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.2.0/swiper-bundle.min.css" integrity="sha512-BYn1UZcpzkgi4cForzUzU/FqsewIcfXDYAU0tThFfehimrUrp5hOtcWPI1Wpli8rKopUIhaDCbxXPttBDTISgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
     
-    <title>홍길동의 포트폴리오</title>
-    
-    <link rel="stylesheet" href="./css/defualt.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/intro.css">
-    <link rel="stylesheet" href="./css/i-am.css">
-    <link rel="stylesheet" href="./css/skills.css">
-    <link rel="stylesheet" href="./css/portfolio.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    
+    <title>박유진 포토폴리오</title>
+    <!--swiper script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.2.0/swiper-bundle.min.js" integrity="sha512-XHnWZWvy5TkCnPgLU7XsWhGAks1JQ3uFutVxRSH0Z4+djsGkCkxVsYu+JgfrDicvbCmjfUf1HeMWYUvUYKgjzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <!-- font-awesome script -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 </head>
+<style>
+    /* 공통스타일 */
+    .wrapper{
+        overflow:hidden;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+    :root {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 14px;
+    }
+
+    /* Reset */
+    * {box-sizing: border-box;margin: 0;padding: 0;}
+
+    h1,h2,h3,h4,h5,h6 {font-weight: inherit;font-size: inherit;}
+
+    b,strong {font-weight: inherit;}
+
+    i,address {font-style: inherit;}
+
+    ul,ol,li {list-style: none;}
+
+    a {text-decoration: none;color: inherit;}
+
+    img {vertical-align: top;width: 100%;}
+
+    /*header style*/
+    .header {background-color: #fff;position: fixed;left: 0;right: 0;top: 0;z-index:10000;}
+    .header-container {display: flex;flex-flow: row nowrap;justify-content: space-between;padding: 20px 20px;}
+    .header .contents {background-color: rgb(255, 228, 196);width: 25px;height: 25px;text-align: center;font-size: 18px;}
+    .nav {display: none;padding-top: 10px;height: 45px;background: #000;font-size: 16px;color: #fff;position: absolute;left: 0;right: 0;top: 100%;z-index:9999px;}
+    .nav ul {display: flex;justify-content: space-between;margin-left: 20px;margin-right: 20px;}
+    .btn-nav {width: 25px;height: 20px;display: flex;flex-flow: column nowrap;justify-content: space-between;}
+    .btn-nav span {width: 100%;height: 2px;background-color: #000;text-indent:-99999px;cursor: pointer;}
+    .line {width: 100%;height: 1px;background-color: #000;text-indent: -99999px;}
+    .header-container .contents{
+        animation: rotate90 8s 2s forwards;
+    }
+    @keyframes rotate90{
+        0%{
+            transform:rotate(0deg)
+        }
+        25%{
+            transform:rotate(90deg)
+        }
+        50%{
+            transform:rotate(180deg)
+        }
+        75%{
+            transform:rotate(270deg)
+        }
+        100%{
+            transform:rotate(360deg)
+        }
+    }
+
+    /* home style */
+    .section.home{
+        padding-top:80px;
+    }
+    .section.home .container {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .section.home h1 {
+        margin-left: 10px;
+        font-weight: 500;
+        font-size: 22px;
+    }
+    strong {
+        position:absolute;
+        left:130px;
+        top:119px;
+        text-align:center;
+    }
+    .textSlide {
+        position:absolute;
+        left:185px;
+        top:108px;
+        padding-top: 10px;
+        font-weight: 500;
+        font-size: 16px;
+        text-align:center;
+        color:rgb(37, 92, 241);
+        animation:animatetop 3s infinite;
+    }
+
+    @keyframes animatetop{
+        0%{
+            top:90px;
+            opacity:0;
+        }
+        100%{
+            top:107px;
+            opacity:1;
+        }
+    }
+
+    .section.home p {
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 15px;
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
+        color: rgb(37, 92, 241);
+    }
+
+    .section.home .img-box {
+        padding:0 50px;
+        text-align: center;
+    }
+
+    .section.home img {
+        width:70%;
+    }
+
+    /* about me sytle */
+    .section.about-me{
+        padding:0 10px;
+    }
+    .container.container-about-me {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:8px 8px;
+    }
+    .container-aobut-me01 {
+        border: 1px solid #4a83fd;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        font-size:12px;
+    }
+
+    .container-aobut-me02 {
+        border: 1px solid #4a83fd;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        font-size:12px;
+    }
+
+    .container-aobut-me03 {
+        border: 1px solid #4a83fd;
+        grid-column: 2/3;
+        grid-row: 1/3;
+        position:relative;
+    }
+
+    .section.about-me h1 {
+        padding-top: 30px;
+        padding-bottom: 10px;
+        font-weight: 500;
+        font-size: 22px;
+    }
+    .images-red{
+        opacity:0.3;
+    }
+    .images-red:hover{
+        opacity:1;
+        transition:opacity 2s;
+    }
+    
+    #mouse{
+        position:absolute;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+        color:black;
+    }
+    .cover-letter-btn{
+        width: 80%;
+        display: block;
+        margin: 10px 63%;
+        height: 25px;
+        border: 1px dotted;
+        border-radius: 11px;
+        background-color: bisque;
+        font-weight: 900;
+        font-size: 10px;
+        }
+
+    .modal{
+        position:fixed;
+        left:0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding:100px 200px;
+        overflow-x:hidden;
+        overflow-y:auto;
+        display:none;
+    }
+
+    .pop-up.modal{
+        padding:20px 20px;
+        z-index:9999;
+    }
+    .cover-letter{
+        padding:90px 0px;
+    }
+
+    #close-modal{
+        width:30%;
+        display: block;
+        margin: 5% 35%;
+        height: 25px;
+        border: 1px dotted;
+        border-radius: 10px;
+        background-color: bisque;
+        font-weight: 900;
+        font-size: 10px;
+    }
+
+
+    /*PROJECT STYLE*/
+    .section.project{
+        padding:0 10px;
+    }
+    .section.project h1{
+        padding-top: 30px;
+        font-weight: 500;
+        font-size: 22px;
+    }
+
+    .portfolio-btn{
+        width:40%;
+        display:block;
+        margin:0 auto;
+        height:25px;
+        border:1px dotted;
+        border-radius:11px;
+        background-color: bisque;
+        font-weight:900;
+        font-size:10px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev{
+        color:black;
+    }
+
+
+    /*CONTACT STYLE*/
+    .section.contact{
+        padding:30px 10px;
+    }
+    .section.contact h1{
+        padding:10px 0;
+        font-weight: 500;
+        font-size: 22px;
+    }
+    .img-box-contact{
+        display:flex;
+        flex-flow:row nowrap;
+    }
+    .img-box-contact .img-box01{
+        width:55%;
+        height:80%;
+    }
+    .img-box-contact .img-box02{
+        position: relative;
+        width:100%;
+        height:100%;
+    }
+    .img-box-contact .img-box02 .p1{
+        position:absolute;
+        left:10px;
+        top:15px;
+        text-align: center;
+        color:#290d0d;
+        font-size:2.5vw;
+        font-weight: 700;
+    }
+    .img-box-contact .img-box02 .p2{
+        position: absolute;
+        left:42px;
+        top:102px;
+        text-align: left;
+        font-size:2.5vw;
+        font-weight: 500;
+    }
+
+    /*FOOTER STYLE*/
+    .container.container-footer{
+        padding:5px;
+        border-top:1px solid black;
+        text-align: center;
+    }
+
+
+
+    /* pc style */
+    @media(min-width:1220px) {
+
+        /* header style */
+        .header {
+            position: relative;
+        }
+
+        .header .contents {
+            background-color: rgb(255, 228, 196);
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        .nav {
+            display: flex !important;
+            position: static;
+            background-color: transparent;
+            color: #000;
+        }
+
+        .nav>ul {
+            justify-content: space-between;
+        }
+
+        .nav>ul>li {
+            margin-left: 60px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .btn-nav {
+            display: none;
+        }
+
+        /* home style */
+        .textSlide, strong{
+            width:100%;
+            text-align:center;
+            font-size:28px;
+            position: absolute;
+            transform: translate(-10%, 10%);
+        }
+        strong{
+            transform: translate(-14%, 0%);
+        }
+
+        .section.home{
+            padding:10px;
+        }
+        .section.home p{
+            width: 100%;
+            font-size: 28px;
+        }
+        .section.home .img-box {
+            width:50%;
+            margin:0 auto;
+        }
+
+        /* about me sytle */
+        .section.about-me h1{
+            padding-left:20px;
+        }
+
+        .container.container-about-me {
+            /* height:440px; */
+            margin:20px;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap:20px;
+        }
+        .container-aobut-me01 {
+            border: 1px solid #4a83fd;
+            grid-column: 2/3;
+            grid-row: 1/2;
+            font-size:24px;
+        }
+
+        .container-aobut-me02 {
+            border: 1px solid #4a83fd;
+            grid-column: 3/4;
+            grid-row: 1/2;
+            font-size:24px;
+        }
+
+        .container-aobut-me03 {
+            border: 1px solid #4a83fd;
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        .container-aobut-me03>.images-red{
+            width:100%;
+            height:100%;
+            opacity:0.5;
+        }
+        .cover-letter-btn{
+            width:110%;
+            height:50px;
+            margin:20px 100%;
+            border:2px dotted;
+            border-radius:10px;
+            background-color: bisque;
+            font-weight:900;
+            font-size:24px;
+        }
+
+        /* PROJECT STYLE */
+        .section.project h1{
+            padding-left:20px;
+        }
+        .section.project{
+            padding:160px 10px;
+        }
+        .portfolio-btn{
+            width:33%;
+            height:50px;
+            border:2px dotted;
+            border-radius:10px;
+            background-color: bisque;
+            font-weight:900;
+            font-size:24px;
+        }
+
+        /* CONTACT STYLE */
+        .section.contact h1{
+            padding-left:20px;
+        }
+        .section.contact{
+            margin-top:110px;
+        }
+    }
+</style>
+
+
 <body>
-    <!-- 스킵메뉴 생략 -->
     <section class="wrapper">
-        <header class="header">
+        <section class="header">
             <div class="container header-container">
-                <div class="contents">
-                    <h1 class="logo">
-                        <a href="./index.html"><span>C.H.J </span>PortFolio</a>
-                    </h1>
-                    <nav class="nav" id="nav">
-                        <ul>
-                            <li><a href="#intro" class="smooth">Home</a></li>
-                            <li><a href="#i-am" class="smooth">I'm</a></li>
-                            <li><a href="#skill" class="smooth">Skill</a></li>
-                            <li><a href="#portfolio" class="smooth">PortFolio</a></li>
-                        </ul>
-                    </nav>
-                    <div class="e-mail">
-                        <span>E-mail:</span><a href="mailto:pam7461@gmail.com">pam7461@gmail.com</a>
-                    </div>
-                    <div class="btn-nav" id="btn-nav">
-                        <i class="fas fa-ellipsis-h"></i>
-                    </div>
+                <div class="contents" id="btn-flow">:)
+                    <a href="#work" rel="modal:open"></a> 
+                </div>
+                <div class="nav" id="nav">
+                    <ul>
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#about-me">ABOUT ME</a></li>
+                        <li><a href="#project">PROJECT</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="btn-nav" id="btn-nav">
+                    <span>라인</span>
+                    <span>라인</span>
+                    <span>라인</span>
                 </div>
             </div>
-        </header>
-        <section class="section intro" id="intro">
-            <figure class="back-video">
-                <figcaption>나를 소개합니다.</figcaption>
-                <video src="./media/back-video.mp4" loop autoplay muted></video>
-            </figure>
-            <div class="container intro-container">
-                <div class="contents">                    
-                    <div class="intro-txt" data-aos="fade-up" data-aos-duration="3000">
-                        <h2>WELCOME</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, ad veritatis? Atque nam, mollitia voluptatibus rem ab saepe quasi, adipisci consequuntur est quia architecto. Eveniet maiores asperiores recusandae maxime debitis.
-                            Praesentium recusandae perspiciatis, mollitia repellendus amet sequi facere rerum, blanditiis odio necessitatibus, fuga cupiditate reprehenderit! Perspiciatis doloribus cupiditate error modi similique illum nemo. Magnam neque assumenda, a tenetur numquam odio.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section i-am"  id="i-am">
-            <div class="container i-am-container">
-                <div class="contents">
-                    <h2 class="sec-tit" data-aos="fade-up" data-aos-duration="1000">I am</h2>
-                    <div class="img-box">
-                        <picture>
-                            <source  media="(min-width:1220px)" srcset="./images/my02.png">
-                            <img src="./images/my01.png" alt="나의 얼굴">
-                        </picture>
-                    </div>
-                    <div class="con-txt">
-                        <h3 class="sub-tit"  data-aos="fade-right"  data-aos-duration="1000" data-aos-delay="1000">나를 소개합니다.</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi obcaecati iure, magni quidem ut neque doloremque quia dolore, facilis laudantium cumque ea earum recusandae iusto enim voluptas nisi. Ad, quae?
-                            Itaque culpa, reiciendis, harum a qui alias totam quis veniam ipsam cum eveniet nihil quasi. Ipsa itaque repellendus sit quae perspiciatis vitae non? Facere ipsa tempore ad in temporibus delectus?
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section skill"  id="skill">
-            <div class="container skill-container">
-                <div class="contents">
-                    <h2 class="sec-tit" data-aos="fade-up">SKILLS</h2>
-                    <article class="ps">
-                        <div class="img-box">
-                            <img src="./images/ps.png" alt="포토샵이미지">
-                        </div>
-                        <h3 class="sub-tit"  data-aos="fade-right">
-                            PhotoShop
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque placeat dicta eligendi accusantium nostrum! Voluptatem, eaque ducimus molestias, dicta tempora nemo laboriosam sequi quia dolorem, temporibus dignissimos esse illum a.</p>
-                    </article>
-                    <article class="ai">
-                        <div class="img-box">
-                            <img src="./images/ps.png" alt="포토샵이미지">
-                        </div>
-                        <h3 class="sub-tit"  data-aos="fade-right">
-                            Illustrator
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque placeat dicta eligendi accusantium nostrum! Voluptatem, eaque ducimus molestias, dicta tempora nemo laboriosam sequi quia dolorem, temporibus dignissimos esse illum a.</p>
-                    </article>
-                    <article class="pp">
-                        <div class="img-box">
-                            <img src="./images/ps.png" alt="포토샵이미지">
-                        </div>
-                        <h3 class="sub-tit" data-aos="fade-right">
-                            Premiere
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque placeat dicta eligendi accusantium nostrum! Voluptatem, eaque ducimus molestias, dicta tempora nemo laboriosam sequi quia dolorem, temporibus dignissimos esse illum a.</p>
-                    </article>
-                    <article class="html">
-                        <div class="img-box">
-                            <img src="./images/ps.png" alt="포토샵이미지">
-                        </div>
-                        <h3 class="sub-tit" data-aos="fade-right">
-                            HTML5
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque placeat dicta eligendi accusantium nostrum! Voluptatem, eaque ducimus molestias, dicta tempora nemo laboriosam sequi quia dolorem, temporibus dignissimos esse illum a.</p>
-                    </article>
-                    <article class="css">
-                        <div class="img-box">
-                            <img src="./images/ps.png" alt="포토샵이미지">
-                        </div>
-                        <h3 class="sub-tit" data-aos="fade-right">
-                            CSS3
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque placeat dicta eligendi accusantium nostrum! Voluptatem, eaque ducimus molestias, dicta tempora nemo laboriosam sequi quia dolorem, temporibus dignissimos esse illum a.</p>
-                    </article>
-                    <article class="js">
-                        <div class="img-box">
-                            <img class="lazy" src="./images/ps.png" alt="포토샵이미지">
-                        </div>
-                        <h3 class="sub-tit" data-aos="fade-right">
-                            javaScript
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque placeat dicta eligendi accusantium nostrum! Voluptatem, eaque ducimus molestias, dicta tempora nemo laboriosam sequi quia dolorem, temporibus dignissimos esse illum a.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-        <section class="section portfolio"  id="portfolio">
-            <div class="container portfolio-container">
-                <div class="contents">
-                    <h2 class="sec-tit" data-aos="fade-up">PORTFOLIO</h2>
-                    <article class="megabox">
-                        <div class="img-box"><img src="./images/megabox/megabox.jpg" alt="메가박스"></div>
-                        <div class="txt-box">
-                            <p class="pj-num">1</p>
-                            <h3 class="pj-tit">MEGABOX</h3>
-                            <p class="pj-skill">PhotoShop, Illustrator, HTML5, CSS3, javaScript</p>
-                            <p class="btn-work" id="btn-megabox">
-                                <a href="#work" rel="modal:open">작업과정바로가기</a>                                
-                            </p>
-                            <p class="btn-site"><a href="https://pam7464.github.io/megabox/" target="_blank">사이트바로가기</a></p>
-                        </div>
-                    </article>
-                    <article class="hollys">
-                        <div class="img-box"><img src="./images/hollys/hollys.jpg" alt="할리스"></div>
-                        <div class="txt-box">
-                            <p class="pj-num">2</p>
-                            <h3 class="pj-tit">HOLLYS</h3>
-                            <p class="pj-skill">HTML5, CSS3, javaScript, Bootstrap, AJAX</p>
-                            <p class="btn-work"  id="btn-hollys">
-                                <a href="#work" rel="modal:open">작업과정바로가기</a>
-                            </p>
-                            <p class="btn-site"><a href="https://pam7464.github.io/hollys/" target="_blank">사이트바로가기</a></p>
-                        </div>
-                    </article>
-                </div>
-            </div>
+            <div class="line">라인</div>
         </section>
         <section class="section work modal" id="work">
             <div class="container work-container">
                 <div class="contents">
-                    <h2 class="sec-tit">Work Flow</h2>
                     <div class="work-content">
 
                     </div>
                 </div>
             </div>
         </section>
-        <footer class="footer">
-            <div class="container footer-container">
-                <div class="footer-tit">
-                    CONTECT ME!
+        <section class="section home" id="home">
+            <div class="container container-home">
+                <h1>HOME</h1>
+                <strong>Hi, I am&nbsp;&nbsp;</strong>
+                <div class="silde">
+                    <ul class="textSlide">
+                        <li class="slide-txt">도전하는</li>
+                        <li class="slide-txt">함께하는</li>
+                        <li class="slide-txt">성장하는</li>
+                    </ul>
                 </div>
-                <address>
-                    <p class="phone">010-1111-2222</p>
-                    <p class="footer-e-mail">pam7461@naver.com</p>  
-                    <p class="git"><a href="https://www.github.com/pam7464" target="_blank">GitHub</a></p>                  
-                </address>                
+                <p> 개발자 박유진입니다!</p>
+                <div class="img-box">
+                    <img src="./images/me01.jpg" alt="자기소개 이미지01">
+                </div>
             </div>
-        </footer>
-    </section>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.2.0/swiper-bundle.min.js" integrity="sha512-XHnWZWvy5TkCnPgLU7XsWhGAks1JQ3uFutVxRSH0Z4+djsGkCkxVsYu+JgfrDicvbCmjfUf1HeMWYUvUYKgjzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.statically.io/gh/kswedberg/jquery-smooth-scroll/3948290d/jquery.smooth-scroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        </section>
+        <section class="section about-me" id="about-me">
+          <h1>ABOUT ME</h1>
+            <section class="container container-about-me">
+                <div class="container container-aobut-me01">경력<br>2021 UI/UX 웹 과정 수료<br>2021 정보처리기사 실기응시<br>2022 SCU컴퓨터공학과 졸업</div>
+                <div class="container container-aobut-me02">사용가능기술<br>#PhotoShop #illustator<br>#HTML5&nbsp;#CSS3&nbsp;#jQuery<br>#After Effect #Premiere Pro</div>
+                <div class="container container-aobut-me03">
+                    <img class="images-red" src="./images/me02.jpg" alt="이미지02">
+                    <div class="mouse-box">
+                        <i id="mouse" class="fa fa-mouse-pointer" aria-hidden="true"></i>
+                    </div>
+                </div>
+                    <input id="open-modal" class="cover-letter-btn" type="button" value="자기소개서 바로가기"> 
+                    <div class="pop-up modal">
+                        <article class="cover-letter">
+                            <img src="./images/work-flow/자기소개서01.png" alt="자기소개서 이미지01">
+                            <img src="./images/work-flow/지원동기.png" alt="자기소개서 이미지02">
+                            <img src="./images/work-flow/학교경험.png" alt="자기소개서 이미지03">
+                            <img src="./images/work-flow/성격의장단점.png" alt="자기소개서 이미지04">
+                            <img src="./images/work-flow/성장배경.png" alt="자기소개서 이미지05">   
+                            <input id="close-modal" type="button" value="닫기">
+                        </article>
+                    </div>
+            </section>
+        </section>
+        <section class="section project" id="project">
+            <h1>PROJECT</h1>
+            <div class="container container-project">
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide portfolio">
+                            <div class="img-box">
+                                <img src="./images/magabox.png" alt="메가박스 포토폴리오">
+                            </div>
+                        </div>
+                        <div class="swiper-slide portfolio">
+                            <div class="img-box">
+                                <img src="./images/hollys.png" alt="할리스 포토폴리오">
+                            </div>
+                        </div>
+                        <div class="swiper-slide portfolio">
+                            <div class="img-box">
+                                <img src="./images/hansole.png" alt="한솔제지 포토폴리오">
+                            </div>
+                        </div>
+                        <div class="swiper-slide portfolio">
+                            <div class="img-box">
+                                <img src="./images/indigo.png" alt="인디고 포토폴리오">
+                            </div>
+                        </div>
+                        <div class="swiper-slide portfolio">
+                            <div class="img-box">
+                                <img src="./images/tourlist.png" alt="투어리스트 포토폴리오">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <a class="portfolio-btn-a" href="https://rtt1006-portfolio.github.io/Project-2/">
+                      <input type="button" value="포토폴리오 바로가기" class="portfolio-btn">
+                    </a>
+                </div>                            
+            </div>
+
+        </section>
+        <section class="section contact" id="contact">
+          <h1>CONTACT</h1>
+            <div class="container container-contact">
+                <div class="img-box-contact">
+                    <div class="img-box01">
+                        <img src="./images/팝업이미지.png" alt="contact-images">
+                    </div>
+                    <div class="img-box02">
+                        <img src="./images/contact.jpg" alt="contact-images">
+                        <p class="p1">겉보기에 화려함보다<br>최적의 사용자 경험을 제공하는 것을 목표로 하는<br> 웹 퍼블리셔, 박유진이 되겠습니다.</p><br>
+                        <p class="p2">이름:박유진 女<br>연락처:010-4714-0705<br>이메일:pyou97@naver.com</p>
+                    </div>
+                </div>    
+
+            </div>
+        </section>
+        <section class="section footer">
+            <div class="container container-footer">
+                <p>방문해주셔서 감사합니다. THANK YOU:)</p>
+            </div>
+        </section>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script>
-        // 바닐라스크립트
-        // let btnNav = document.getElementById('btn-nav');
-        // let nav = document.getElementById('nav');
-
-        // btnNav.addEventListener('click',function(){
-        //     nav.classList.toggle('active');
-        // })
-        
-
-
-        // 제이쿼리
-        $('#btn-nav').click(function(){
+        $('#btn-nav').click(function () {
             $('#nav').slideToggle(300);
-        });
-
-
-        let introHeight = $('.intro').height();
-        $('.intro-txt').css('height',introHeight);
-
-        $(window).resize(function(){
-            introHeight = $('.intro').height();
-            $('.intro-txt').css('height',introHeight);
         })
-        
-        $('#btn-megabox').on({
-            'click':function(){
-                $('.work-content').load('./modal.txt .work-megabox');
-            }
-        })
-        $('#btn-hollys').on({
-            'click':function(){
-                $('.work-content').load('./modal.txt .work-hollys');
-            }
-        })
-
-        // smooth scroll
-        $('a.smooth').smoothScroll();
-
-        // AOS
-        AOS.init();
     </script>
+
+
+     <!-- Swiper JS -->
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+     <!-- Initialize Swiper -->
+     <script>
+       var swiper = new Swiper(".mySwiper", {
+        // slidesPerView: 1.5,
+        // spaceBetween: 30,
+        // breakpoints: {
+        //   640: {
+        //     slidesPerView:2.5,
+        //     spaceBetween: 20,
+        //   },
+          
+        //   1220: {
+        //     slidesPerView:3.5,
+        //     spaceBetween: 50,
+        //   },
+        // }
+         navigation: {
+           nextEl: ".swiper-button-next",
+           prevEl: ".swiper-button-prev",
+         },
+       });
+     </script>
+
+    <script>
+      //텍스트 슬라이드
+        let textSlide = 0;
+        carousel();
+
+        function carousel() {
+        let i;
+        const text = document.getElementsByClassName("slide-txt");
+        for (i = 0; i < text.length; i++) {
+            text[i].style.display = "none";
+        }
+        textSlide++;
+        if (textSlide > text.length) {
+            textSlide = 1;
+        }
+        text[textSlide - 1].style.display = "block";
+        setTimeout(carousel, 3000);
+        }
+
+    </script>
+
+    <script>
+        $('.images-red').hover(function(){
+            $('#mouse').hide(1);
+        })
+    </script>
+
+    <script>
+        $('#btn-flow').on({
+            'click':function(){
+                $('.work-content').load('./modal.txt .work-flow');
+            }
+        })
+
+        $('#btn-cover-letter').on({
+            'click':function(){
+                $('.cover-letter-content').load('./modal.txt .cover-letter');
+            }
+        })
+
+        $('#close-btn').click(function(){
+            $('#cover-letter').css('display','none');
+        })
+
+    </script>
+
+    <script>
+        $(function(){
+            $('#open-modal').click(function(){
+                $('body').css({
+                    'height':'100vh',
+                    'overflow-y': 'hidden',
+                })                
+                
+                $('.modal').css({
+                    'display':'block',                    
+                }) 
+            })  
+
+            $('#close-modal').click(function(){
+                $('body').css({
+                    'height':'auto',
+                    'overflow-y': 'auto',
+                })                
+                
+                $('.modal').css({
+                    'display':'none',                    
+                }) 
+            })
+        })
+
+    </script>
+    
 </body>
+
 </html>
